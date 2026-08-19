@@ -23,11 +23,16 @@ Di dalam repo ini Anda akan menemukan notebook hands-on yang digunakan pada seti
 5. **Pertemuan 5** - [Pertemuan5_Alfarell_Muchamad_Yuwanto_240401010037.ipynb](Pertemuan5_Alfarell_Muchamad_Yuwanto_240401010037.ipynb) - Dashboard visualisasi statis (dataset `tips`), pembuatan subplot 2×2 dan ekspor gambar ke `./exports/dashboard_tips.png`.
 6. **Pertemuan 6** - [Pertemuan6_Alfarell_Muchamad_Yuwanto_240401010037.ipynb](Pertemuan6_Alfarell_Muchamad_Yuwanto_240401010037.ipynb) - Preprocessing (handling missing, encoding, scaling) dan persiapan train/test (Titanic).
 7. **Pertemuan 7** - [Pertemuan7_Alfarell_Muchamad_Yuwanto_240401010037.ipynb](Pertemuan7_Alfarell_Muchamad_Yuwanto_240401010037.ipynb) - Prediksi Gaji (dataset sintetis), regresi linear, evaluasi model.
+8. **Pertemuan 9** - [Pertemuan9_Alfarell_Muchamad_Yuwanto_240401010037.ipynb](Pertemuan9_Alfarell_Muchamad_Yuwanto_240401010037.ipynb) - Klasifikasi Supervised: Logistic Regression vs Decision Tree (Breast Cancer dataset), Confusion Matrix, evaluasi metrik (Precision, Recall, F1-Score), visualisasi pohon keputusan.
+9. **Pertemuan 10** - [Pertemuan10_Alfarell_Muchamad_Yuwanto_240401010037.ipynb](Pertemuan10_Alfarell_Muchamad_Yuwanto_240401010037.ipynb) - Klasifikasi Imbalanced Data & Random Forest (Telco Customer Churn), pembobotan `class_weight='balanced'`, evaluasi ROC-AUC score, dan estimasi probabilitas churn.
+10. **Pertemuan 11** - [Pertemuan11_Alfarell_Muchamad_Yuwanto_240401010037.ipynb](Pertemuan11_Alfarell_Muchamad_Yuwanto_240401010037.ipynb) - Unsupervised Learning: Segmentasi Pelanggan dengan K-Means Clustering, Elbow Method (WCSS), Silhouette Score, serta Hierarchical Clustering (Dendrogram & Ward's Linkage).
+11. **Pertemuan 12** - [Pertemuan12_Alfarell_Muchamad_Yuwanto_240401010037.ipynb](Pertemuan12_Alfarell_Muchamad_Yuwanto_240401010037.ipynb) - Market Basket Analysis & Sistem Rekomendasi: Algoritma Apriori & Association Rules (`mlxtend`) dengan metrik Support, Confidence, Lift, serta Content-Based Filtering menggunakan Cosine Similarity.
+12. **Pertemuan 13** - [Pertemuan13_Alfarell_Muchamad_Yuwanto_240401010037.ipynb](Pertemuan13_Alfarell_Muchamad_Yuwanto_240401010037.ipynb) - Klasifikasi Non-Linear & NLP: Membangun Multi-Layer Perceptron (MLP) Neural Network dengan TensorFlow/Keras pada dataset non-linear `make_moons`, serta Analisis Sentimen teks ulasan produk dengan TF-IDF Vectorizer + Logistic Regression.
 
 ## Tools & Library
 
 - **Bahasa Pemrograman:** Python 3.x
-- **Library utama:** pandas, numpy, matplotlib, seaborn, scikit-learn, scipy
+- **Library utama:** pandas, numpy, matplotlib, seaborn, scikit-learn, scipy, mlxtend, tensorflow
 - **Environment / Tools:** Jupyter Notebook / JupyterLab, Google Colab, Git & GitHub
 
 ## Menjalankan notebook
@@ -44,7 +49,7 @@ python -m venv .venv
 # macOS/Linux:
 # source .venv/bin/activate
 pip install --upgrade pip
-pip install pandas numpy matplotlib seaborn scikit-learn scipy jupyter
+pip install pandas numpy matplotlib seaborn scikit-learn scipy mlxtend tensorflow jupyter
 ```
 
 3. Jalankan Jupyter Lab/Notebook dan buka file `.ipynb` yang diinginkan:
@@ -64,6 +69,10 @@ jupyter notebook
   - Gunakan `fig.savefig(...)` (menyimpan objek figure langsung) atau pastikan menyimpan setelah semua plotting selesai.
   - Tambahkan `fig.tight_layout()` sebelum menyimpan untuk memperbaiki tata letak.
 
-## Kesimpulan singkat (Pertemuan 1-7)
+## Kesimpulan singkat (Pertemuan 1-13)
 
-Selama 7 pertemuan ini saya mempraktikkan alur dasar Data Science: pemrograman Python dasar, pemuatan dan EDA dataset, pembersihan data, teknik visualisasi, pra-pemrosesan untuk machine learning, serta pelatihan dan evaluasi model sederhana. Materi ini membentuk fondasi yang kuat untuk praktik lanjutan seperti feature engineering, model tuning, dan deployment.
+Selama 13 pertemuan ini saya mempraktikkan alur kerja Data Science yang menyeluruh:
+- **Fondasi & Eksplorasi (P1–P5):** Pemrograman Python dasar, pemuatan data, pembersihan data (*missing values, duplicates, outliers*), eksplorasi statistik, dan perancangan *dashboard* visualisasi statis.
+- **Preprocessing & Machine Learning Klasik (P6–P10):** Penskalaan fitur, *encoding* data kategorikal, pemodelan Regresi Linear, Klasifikasi (Logistic Regression, Decision Tree, Random Forest), penanganan *imbalanced data*, dan evaluasi komprehensif (MAE, RMSE, $R^2$, Precision, Recall, F1-Score, ROC-AUC).
+- **Unsupervised Learning & Data Mining (P11–P12):** Segmentasi klaster pelanggan dengan K-Means dan Hierarchical Clustering, penentuan klaster optimal via Elbow Method dan Silhouette Score, *Market Basket Analysis* dengan algoritma Apriori & Association Rules, serta sistem rekomendasi *Content-Based Filtering*.
+- **Deep Learning & NLP (P13):** Jaringan saraf tiruan (*Multi-Layer Perceptron / MLP*) dengan Keras/TensorFlow untuk pemisahan data non-linear, serta pemrosesan bahasa alami (NLP) untuk analisis sentimen ulasan produk menggunakan TF-IDF dan Logistic Regression.
